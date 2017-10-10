@@ -2,7 +2,7 @@ const { app, BrowserWindow, Tray } = require('electron');
 const electron = require('electron')
 const Menubar = require('menubar');
 const windows = new Set()
-const menubar = Menubar({ width: 400, height: 500, icon: './images/white-owl.png' })
+const menubar = Menubar({ width: 400, height: 500, icon: './images/black-owl.png' })
 
 
 let displaySize

@@ -33,21 +33,21 @@ const wordObjArray = splitter(textFromMenu);
 let currentWordIndex = 0;
 const run = () => {
   if (!PAUSED) {
-    if(currentWordIndex < wordObjArray.length - 1) {
+    if (currentWordIndex < wordObjArray.length - 1) {
       currentWordIndex++;
-      const wordObject = wordObjArray[currentWordIndex];
+      // const wordObject = wordObjArray[currentWordIndex];
 
       if (wordObjArray[currentWordIndex].punctuation) {
-        setTimeout(() => { run() }, msSpeed() * 2);
+        setTimeout(() => { run(); }, msSpeed() * 2);
       } else {
-        setTimeout(() => { run() }, msSpeed());
+        setTimeout(() => { run(); }, msSpeed());
       }
     } else {
       window.close();
     }
     updateDisplay();
   }
-}
+};
 
 const updateDisplay = () => {
   const past = wordObjArray.slice(0, currentWordIndex).map(obj => obj.word).join(' ');
@@ -66,7 +66,7 @@ const setWPM = () => {
 };
 
 const playPause = () => {
-  $('.play-pause-button').toggleClass('play-pause-button-pause')
+  $('.play-pause-button').toggleClass('play-pause-button-pause');
   PAUSED = !PAUSED;
   !PAUSED && run();
 };
