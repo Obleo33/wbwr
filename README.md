@@ -3,7 +3,8 @@ Word by word reader is a menu bar application built in electron. Copy and paste 
 
 ## Tech Stack
 * Electron
-* CSS 3
+* CSS3
+* ES6
 * JQuery
 
 ## Authors
